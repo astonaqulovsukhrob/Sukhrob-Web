@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SukhrobWeb</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="icon" href="images/github-icon-1 .svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,45 +18,42 @@
 <body>
 
   <!-- navbar -->
-  <nav class="nav-header">
+  <nav class="nav-header" data-aos="zoom-in-down">
     <a href="https://instagram.com/sukhrobweb">SukhrobWeb</a>
     <ul class="navbar-nav">
-      <li>
-        <a href="#">Aobut</a>
-      </li>
-      <li>
-        <a href="#">Blog</a>
-      </li>
-      <li>
-        <a href="#">Content</a>
-      </li>
+      <li><a href="#header-nav">Aobut</a></li>
+      <li><a href="#main">Blog</a></li>
+      <li><a href="#github">Content</a></li>
     </ul>
   </nav>
   <!-- /navbar -->
 
   <!-- navbar responsive -->
-  <nav class="main-header">
+  <nav class="main-header" data-aos="zoom-in-down">
     <a href="https://instagram.com/sukhrobweb">SukhrobWeb</a>
     <button class="btn" id="btn">
       <i class="fas fa-bars"></i>
     </button>
     <ul class="navbar">
-      <li><a href="#">Aobut</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Content</a></li>
+      <li><a href="#header-nav">Aobut</a></li>
+      <li><a href="#main">Blog</a></li>
+      <li><a href="#github">Content</a></li>
     </ul>
   </nav>
   <!-- navbar responsive -->
 
-  <header class="header-nav">
-    <h2 class="title">SukhrobWeb
+  <!-- headerNav -->
+  <header class="header-nav" id="header-nav" data-aos="zoom-in-down">
+    <h2 class="title">Sukhrob
       <span class="typing">Landing</span>
     </h2>
   </header>
+  <!-- /headerNav -->
 
-  <section>
+  <!-- constainer section -->
+  <section id="main">
     <div class="container">
-      <div class="tajribam">
+      <div class="tajribam" data-aos="zoom-in-right">
         <h2>My Skills</h2>
         <div class="skills">
           <div class="html">
@@ -67,34 +67,94 @@
             </i>
           </div>
           <div class="js">
-            <i class="fab fa-js">
-              40%
-            </i>
+            <span>
+              <i class="fab fa-js">
+                40%
+              </i>
+            </span>
           </div>
         </div>
       </div>
-      <div class="github">
-        <h2>My github</h2>
-        <div class="mygithub">
-          <img src="" alt="">
+      <div class="github" id="github" data-aos="zoom-in-left">
+        <h2 class="mygithub">My github</h2>
+        <div class="github-title">
+          <div>
+            <img class="github-img" src="xps-YNliXm_hMn8-unsplash.jpg" alt="">
+          </div>
+          <div>
+            <h2 class="name">Welcome to my github
+              <i class="fab fa-github"></i>
+            </h2>
+            <!-- repos -->
+            <div class="repos">
+              <span>
+                <p>Followers</p>
+                <p id="followers">fad</p>
+              </span>
+              <span>
+                <p>Git-repository</p>
+                <p id="repos">fads</p>
+              </span>
+              <span>
+                <p>Stars</p>
+                <p id="stars">afsd</p>
+              </span>
+            </div>
+            <!-- /repos -->
+            <button class="btn1 btn-grad">
+              <p>
+                <a href="https://github.com/astonaqulovsukhrob">Read More <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </button>
+          </div>
         </div>
-        .my
       </div>
     </div>
   </section>
+  <!-- /constainer section -->
+
+  <!-- footer -->
+  <footer>
+    <div class="instagram-icon">
+      <a href="#https://instagram.com/sukhrobweb">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="telegram-icon">
+      <a href="#https://t.me/sukhrob_web">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </div>
+    <div class="github-icon">
+      <a href="#https://github.com/astonaqulovsukhrob">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </footer>
+  <!-- /footer -->
 
 
 
 
 
 
-
-
+  <!-- axios cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- js -->
-  <script src="typed.js"></script>
-  <script src="app.js"></script>
+  <script src="javaScript/typed.js"></script>
+  <script src="javaScript/app.js"></script>
 
+  <!-- animJs -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 400,
+      duration: 1000,
+    });
+  </script>
 </body>
 
 </html>

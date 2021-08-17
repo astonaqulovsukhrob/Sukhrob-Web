@@ -2,21 +2,22 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Montserrat', display;
   background-color: rgb(212, 212, 212);
 }
 
 .nav-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%), url(../frank-mckenna-4V8JxijgZ_c-unsplash.jpg);
-  padding: 10px;
+  background: url(../images/xps-YNliXm_hMn8-unsplash.jpg);
+  z-index: 100;
 }
 
+
 .header-nav {
-  background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%), url(../frank-mckenna-4V8JxijgZ_c-unsplash.jpg);
+  background: url(../images/xps-YNliXm_hMn8-unsplash.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,16 +33,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 70px;
   box-shadow: 0 0 10px #000;
+  transition: .6s;
 }
-
 
 .nav-header a {
   text-decoration: none;
   font-size: 28px;
-  color: rgb(255, 255, 255);
-  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 0 0 8px #000000;
+}
+
+.nav-header.scroll {
+  height: 65px;
+  background: #ffffff;
+}
+
+.nav-header.scroll a {
+  color: #000;
+  text-shadow: none;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #000000;
   margin: 0 5px;
 }
 
@@ -49,7 +67,8 @@ body {
   text-align: center;
   line-height: 2;
   font-size: 80px;
-  color: #ffffff;
+  color: #fff;
+  text-shadow: 0 0 8px #f3a1ab;
 }
 
 .navbar-nav li {
@@ -68,6 +87,7 @@ section {
 }
 
 .container {
+  margin-bottom: 50px;
   margin: 0 15px;
 }
 
@@ -78,28 +98,29 @@ section {
   background-color: #01488d;
   position: relative;
   z-index: 1;
-  transition: height 0.5s;
   text-align: center;
-  margin-bottom: 30px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  transition: height 0.5s;
 }
 
 .html i {
   color: #ffffff;
   position: absolute;
-  top: 4px;
+  top: 5px;
 }
 
 .html::before {
   content: 'HTML';
   position: absolute;
   top: 4px;
-  left: 0;
-  font-weight: 500;
+  left: 4px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .html:hover {
   height: 30px; 
-  color: #fff;
+  cursor: pointer;
 }
 
 /* css */
@@ -109,16 +130,17 @@ section {
   height: 5px;
   background-color: rgb(206, 14, 14); 
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  border-radius: 5px;
   transition: height 0.5s;
 }
 
 .css::before {
   content: 'CSS';
   position: absolute;
-  left: 0;
   top: 4px;
-  font-weight: 500;
+  left: 4px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .css i {
@@ -129,7 +151,7 @@ section {
 
 .css:hover {
   height: 30px;
-  color: #fff;
+  cursor: pointer;
 }
 
 /* js */
@@ -139,15 +161,16 @@ section {
   height: 5px;
   background-color: gold;
   text-align: center;
+  border-radius: 5px;
   transition: height 0.5s;
 }
 
 .js::before {
-  content: 'javaScript';
+  content: 'JavaScript';
   position: absolute;
   top: 4px;
-  left: 0;
-  font-weight: 500;
+  left: 4px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .js i {
@@ -158,7 +181,7 @@ section {
 
 .js:hover {
   height: 30px;
-  color: #fff;
+  cursor: pointer;
 }
 
 /* mygithub */
@@ -166,20 +189,129 @@ section {
   margin-top: 40px;
 }
 
+.github-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 80px;
+  margin: 18px;
+  
+
+}
+
+.mygithub {
+  font-size: 28px;
+}
+
+.github-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 35px;
+}
+
+.repos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.repos p {
+  font-size: 18px;
+}
+
+.btn1 {
+  border: none;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 14px;
+  margin-top: 25px;
+  font-weight: 550;
+}
+
+.btn1 p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-grad {background-image: linear-gradient(to right, #ff6e7f 0%, #dfbcff  51%, #ff6e7f  100%)}.btn-grad {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change thedirection of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.instagram-icon, 
+.telegram-icon, 
+.github-icon {
+  height: 40px;
+  width: 40px;
+  background: white;
+  font-size: 19px;
+  margin: 0 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  animation: iconanim 1.2s ease-in-out infinite alternate;
+}
+
+.instagram-icon a {
+  color: rgb(228, 10, 10);
+}
+
+.telegram-icon a {
+  color: blue;
+}
+
+.github-icon a {
+  color: black;
+}
+
+.instagram-icon:hover, 
+.telegram-icon:hover, 
+.github-icon:hover {
+  box-shadow: 0 0 12px 5px rgb(126, 126, 126);
+  background-color: rgb(209, 209, 209);
+}
 
 
+@keyframes iconanim {
+  from {
+    transform: scale(1);
+  }
 
-
-
-
-
-
-
-
+  to {
+    transform: translateX(12px);
+  }
+}
 
 
 
 @media (max-width: 768px) {
+
+  body {
+    text-align: center;
+  }
 
   .nav-header{
     display: none;
@@ -190,20 +322,27 @@ section {
   }
 
   .main-header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
     display: block;
     background-color: rgb(173, 173, 173);
     padding: 5px;
+    height: 50px;
+    z-index: 50;
   }
 
   .btn {
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 2px;
     outline: none;
     background-color: transparent;
     color: #000;
     border: none;
-    font-size: 20px;
+    font-size: 25px;
+    cursor: pointer;
   }
 
   .navbar {
@@ -214,10 +353,10 @@ section {
     right: 0;
     text-align: left;
     padding: 10px;
-    transition: transform .8s;
+    transition: transform 0.6s;
     background-color: rgb(173, 173, 173);
     transform: translateY(-200px);
-    z-index: 1;
+    z-index: -1;
     border-radius: 0 0 5px 5px;
   }
 
@@ -238,5 +377,27 @@ section {
     margin: 0 10px;
     text-decoration: none;
     color: bisque;
+    font-size: 25px;
   }
+
+  .github-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 18px;
+    gap: 50px;
+  }
+
+  .title{
+    text-align: center;
+    line-height: 2;
+    font-size: 40px;
+    color:#fff;
+    position: absolute;
+    top: 18rem;
+    margin: auto;
+  }
+
 }
