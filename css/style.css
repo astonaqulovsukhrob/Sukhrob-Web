@@ -26,15 +26,11 @@ body {
 }
 
 .nav-header {
-  position: fixed;
-  top: 0;
-  width: 100%; 
+  height: 70px;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
-  box-shadow: 0 0 10px #000;
 }
 
 .nav-header a {
@@ -47,6 +43,14 @@ body {
 .nav-header.scroll {
   height: 65px;
   background: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px #000;
   transition: .6s;
 }
 
