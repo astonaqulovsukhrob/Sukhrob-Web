@@ -404,5 +404,12 @@ footer {
     top: 18rem;
     margin: auto;
   }
+  
+  .js i {
+   color: #fff;
+    position: absolute;
+    top: 4px;
+    right: 0;
+  }
 
 }
